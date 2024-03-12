@@ -13,12 +13,3 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/create', function () {
-    return view('user.create');
-});
-Route::get('/genders', function () {
-    return view('gender.create');
-});

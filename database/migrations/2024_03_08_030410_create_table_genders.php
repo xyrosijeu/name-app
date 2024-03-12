@@ -14,26 +14,10 @@ return new class extends Migration
         Schema::create('genders', function (Blueprint $table) {
             $table->id('gender_id');
             $table->string('gender');
-            $table->string('first_name', 55);
-            $table->string('middle_name', 55)->nullable();
-            $table->string('last_name', 55);
-            $table->string('suffix_name', 55);
-            $table->date('birthdate');
-            $table->unsignedBigInteger('gender_id');
-            $table->string('address');
-            $table->string('contact_number');
-            $table->string('email_address');
-            $table->string('username');
-            $table->string('password', 255);
             $table->timestamps();
-
-            $table->foreign('gender_id')
-                ->references('gender_id')
-                ->on('genders')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
         });
     }
+
     /**
      * Reverse the migrations.
      */
